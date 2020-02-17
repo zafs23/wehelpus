@@ -6,7 +6,9 @@
 
 
 body {
-  background-color: lightskyblue;
+	background-image: linear-gradient(powderblue, lightskyblue, skyblue);
+  //background-color: lightskyblue;
+  //background-image: linear-gradient(burlywood, tan, rosybrown);
   height: 100%
 }
 
@@ -21,8 +23,33 @@ body {
 }
 
 .heading {
-		color: blue;
-		padding-left: 200px;
-		padding-right: 200px;
-		text-align: center;
+	background-color: cadetblue;
+	color: indigo;
+	padding-left: 200px;
+	padding-right: 200px;
+	text-align: center;
+}
+
+.para {
+	font-style: italic;
+	color: navy;
+	background-color: skyblue;
+	font-size: 20px;
+	font-height: 1.2px;
+	max-height: 100%;
+	
+}
+
+#paraid {
+	padding: 20px 20px 20px 20px;
+	float: right;
+	max-width: 60%;
+	//display: inline;
+}
+
+#imgmuniba {
+	float: right
+	max-height: 75%;
+	max-width: 35%;
+	display: inline;
 }

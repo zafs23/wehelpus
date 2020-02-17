@@ -13,7 +13,7 @@
       <!--<li id = "imglogo"> <img id = "imglogo" src="logo2.png" alt="logo"> </li>-->
       <li id = "navbar"><a class = "active" href="index.php">Home</a></li>
       <li id = "navbar"><a href="group.php">Groups</a></li>
-      <li id = "navbar"><a href="#">Healthy Living</a></li>
+      <li id = "navbar"><a href="healthyliving.php">Healthy Living</a></li>
       <li id = "navbar"><a href="inspiration.php">Inspiration</a></li>
       <li id = "navbar"><a href="#">Log In</a></li>
    </ul>

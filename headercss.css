@@ -1,0 +1,51 @@
+
+#body {
+	background-color: lightblue;
+
+}
+
+
+#horizontal-list li{
+	padding-top: 20px;
+	display: inline;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+#horizontal-list li: last-child {
+  border-right: none;
+
+}
+
+#navbar a {
+	color: white;
+	display: block;
+	background-color: royalblue;
+	text-align: center;
+    padding: 16px 30px;
+    text-decoration: none;
+
+}
+
+#imglogo {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 5%;
+	max-height: 5%
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;  
+}
+
+#navbarright {
+	float = right
+}
+
+#navbar a:hover {
+  background-color: darkblue;
+}

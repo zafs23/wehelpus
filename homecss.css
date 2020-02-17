@@ -1,0 +1,92 @@
+
+*{
+	margin: 0;
+	padding: 0;
+
+}
+body {
+  background-color: lightskyblue;
+  height: 100%
+  /*
+  background-image: url("page1_1.jpg");
+  background-repeat: no-repeat;
+  */
+}
+
+
+.heading {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 50px;
+}
+
+#head1 {
+	color: steelblue;
+	text-align: center;
+	margin-top: 5%;
+    margin-bottom: 2.5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 2%;
+    position: relative;
+}
+
+#head2 {
+	color: steelblue;
+	text-align: center;
+	margin-top: 2.5%;
+    margin-bottom: 5%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#container {
+	min-height: 100%;
+}
+#main {
+	overflow: auto;
+	padding-bottom: 100px;
+}
+
+.upper {
+	background-color: dodgerblue;
+	color: mintcream;
+	margin-bottom: .5%;
+	font-family: "Lucida Console", Monaco, monospace;
+	padding: 10px;
+}
+
+#upperhead {
+	margin-left: 20%;
+	margin-right: 70px;
+}
+
+#upperpara {
+    text-align: justify;
+    line-height: 90%;
+	margin-left: 20%;
+	margin-right: 30%;
+	padding-bottom: 20px;
+}
+
+.middle {
+	color: darkslategray;
+	margin-top: .5%;
+	margin-left: .5%;
+	margin-right: .5%;
+	font-family: "Lucida Console", Monaco, monospace;
+
+}
+
+#imgmiddle {
+	float: right;
+	width:600px;
+	height: 400px;
+	margin-left: .5%;
+	padding-bottom: .6%
+}
+
+#middlepara {
+	font-family: "Lucida Console", Monaco, monospace;
+	padding-top: 40px;
+	padding-bottom: .6%;
+}

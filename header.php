@@ -11,7 +11,7 @@
    <img id = "imglogo" src="logo2.png" alt="logo">
    <ul id="horizontal-list">
       <!--<li id = "imglogo"> <img id = "imglogo" src="logo2.png" alt="logo"> </li>-->
-      <li id = "navbar"><a class = "active" href="home.php">Home</a></li>
+      <li id = "navbar"><a class = "active" href="index.php">Home</a></li>
       <li id = "navbar"><a href="group.php">Groups</a></li>
       <li id = "navbar"><a href="#">Healthy Living</a></li>
       <li id = "navbar"><a href="inspiration.php">Inspiration</a></li>

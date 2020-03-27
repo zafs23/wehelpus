@@ -1,3 +1,13 @@
+
+<?php 
+session_start();
+require_once 'Dao.php';
+$dao = new Dao();
+
+$email = isset($_GET['useremail']) ? $_GET['useremail'] : '';
+//$query=mysqli_query($conn,"select * from testuser where email='$email'");
+?>
+
 <html>
 <head>
 	<meta name="wehelpus" content="It is a supporting group." />
@@ -10,12 +20,18 @@
 <nav>
    <img id = "imglogo" src="logo.png" alt="logo">
    <ul id="horizontal-list" >
-      <!--<li id = "imglogo"> <img id = "imglogo" src="logo2.png" alt="logo"> </li>-->
       <li id = "navbar"><a class = "active" href="index.php">Home</a></li>
       <li id = "navbar"><a href="group.php">Groups</a></li>
       <li id = "navbar"><a href="healthyliving.php">Healthy Living</a></li>
       <li id = "navbar"><a href="inspiration.php">Inspiration</a></li>
-      <li id = "navbar"><a href="#">Log In</a></li>
+      <?php
+      if (isset($_SESSION['form']['useremail'])) {
+         echo "<li id = 'navbar'><a href='logout.php'>Log Out</a></li>";
+      } 
+      else {
+         echo "<li id = 'navbar'><a href='signinform.php'>Sign In</a></li>";
+      }
+      ?>
    </ul>
 </nav>
 </header>

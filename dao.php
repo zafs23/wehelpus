@@ -4,10 +4,10 @@ require_once 'klogger.php';
 
 class Dao {
 
-  private $host = 'localhost';
-  private $dbname = 'szafdb';
-  private $username = 'root';
-  private $password = '';
+  private $host = 'us-cdbr-iron-east-01.cleardb.net';
+  private $dbname = 'heroku_66e2d03ccfc9ae0';
+  private $username = 'be0bfa40a67a3d';
+  private $password = 'ceea572a';
   private $logger;
 
   public function __construct() {

@@ -99,4 +99,54 @@ public function checkUsers($email, $password) {
     
     }
 
+public function savecomment ($comment) {
+   $this->logger->LogDebug("Saving a user [{$comment}]");
+    $conn = $this->getConnection();
+    $saveQuery = "INSERT into usercomment (comment) values (?)";
+    if ($conn){
+      $stmt = $conn->prepare($saveQuery) or die(mysqli_error($conn));
+      //mysqli_prepared_query($conn,$query,"ssss",$params);
+      $stmt->bind_Param("s", $comment);
+      return $stmt->execute();
+    }else {
+      echo "Failed Connection";
+      exit;
+     }
+    
+    }
+
+
+    public function getComments() {
+        $conn = $this->getConnection();
+        if(is_null($conn)) {
+            return;
+        }
+        try {
+            $userquery = "SELECT comment FROM usercomment";
+             //$stmt = $conn->prepare($userquery) or die(mysqli_error($conn));
+      //$stmt->bind_Param();
+      //$stmt->execute();
+
+
+      $result = $conn->query($userquery);
+
+      //$result = $stmt->get_result();
+      //$user = $result->fetch_assoc();
+      //return $conn->mysqli_query("select * from testuser where email=:email", PDO::FETCH_ASSOC);
+
+
+      $resultarray = array();
+     while ($row= $result->fetch_array()){
+        $resultarray[] = $row;
+      }
+
+
+      return $resultarray;
+    } catch(Exception $e) {
+      echo print_r($e,1);
+      exit;
+    }
+  }
+
+
 }

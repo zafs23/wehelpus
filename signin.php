@@ -1,6 +1,9 @@
 
 <?php 
-session_start();
+ if(!isset($_SESSION)) 
+ { 
+        session_start(); 
+}
 
 require_once ("dao.php");
 $dao = new Dao();

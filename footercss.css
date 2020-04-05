@@ -1,5 +1,13 @@
 
 #footer {
 	color : gainsboro;
-	background-color: darkslateblue
+	background-color: darkslateblue;
+	position: fixed;
+	margin-top: 20px;
+	padding-bottom: 7px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	 height: 50px;
+     margin-top: -50px;
 }

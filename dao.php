@@ -16,7 +16,7 @@ class Dao {
 
   public function getConnection() {
     try {
-      $connection = mysqli_connect("localhost", "root","", "szafdb");
+      $connection = mysqli_connect($host, $username,$password, $dbname);
       if ( !$connection ) {
            die( 'connect error: '.mysqli_connect_error() );
         }

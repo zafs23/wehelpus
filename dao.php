@@ -16,7 +16,17 @@ class Dao {
 
   public function getConnection() {
     try {
-      $connection = mysqli_connect("localhost", "root","", "szafdb");
+     // $connection = mysqli_connect("us-cdbr-iron-east-01.cleardb.net", "be0bfa40a67a3d", "ceea572a", "heroku_66e2d03ccfc9ae0");
+      $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+      $production = isset($url["host"]);
+
+      $server = ($production) ? $url["host"] : 'localhost';
+      $username = ($production) ? $url["user"] : 'root';
+      $password = ($production) ? $url["pass"] : 'root';
+      $db = ($production) ? substr($url["path"], 1) : 'testdb';
+
+$con = new mysqli($server, $username, $password, $db);
       if ( !$connection ) {
            die( 'connect error: '.mysqli_connect_error() );
         }

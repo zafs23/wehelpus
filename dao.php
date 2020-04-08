@@ -16,13 +16,9 @@ class Dao {
 
   public function getConnection() {
     try {
-<<<<<<< HEAD
      $connection = mysqli_connect("us-cdbr-iron-east-01.cleardb.net", "be0bfa40a67a3d", "ceea572a", "heroku_66e2d03ccfc9ae0");
+      //$connection = mysqli_connect("localhost", "root","", "szafdb");
       
-
-=======
-      $connection = mysqli_connect($host, $username,$password, $dbname);
->>>>>>> 3ee3acea5fe8842383c46e4d31d5f5b394d719e5
       if ( !$connection ) {
            die( 'connect error: '.mysqli_connect_error() );
         }

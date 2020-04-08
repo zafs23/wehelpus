@@ -1,6 +1,6 @@
 <?php 
   session_start();
-    require_once 'Dao.php';
+    require_once 'dao.php';
     $dao = new Dao();
 
 

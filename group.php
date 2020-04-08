@@ -12,7 +12,7 @@ if(!isset($_SESSION))
 } 
 
 
-    require_once 'Dao.php';
+    require_once 'dao.php';
     $dao = new Dao();
 
 ?>

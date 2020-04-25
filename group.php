@@ -6,6 +6,11 @@ include 'header.php';
 //    exit;
 //  }
 
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: signinform.php");
+    exit;
+}
+
 if(!isset($_SESSION)) 
 { 
     session_start(); 
@@ -19,7 +24,11 @@ if(!isset($_SESSION))
 
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="comment_ajax.js"></script>
     <link rel="stylesheet" type="text/css" href="groupcss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merienda+One&family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body >
   	<div id = "container">
@@ -39,8 +48,8 @@ if(!isset($_SESSION))
     </div>
     <div id = "form_class">
         <h4 id = "heading_comment">Post a comment: </h4>
-        <form  action="comment.php" method="post" enctype="multipart/form-data">
-          <textarea type = "text" name="comment" value ="" class="comment" rows="5" cols="70"></textarea>
+        <form  id = "comment_form" action="comment.php" method="post" enctype="multipart/form-data">
+          <textarea type = "text" id ="comment" name="comment" value ="" class="comment" rows="5" cols="70"></textarea>
           <?php 
           if (isset($_SESSION['errors_cm'])){
           foreach ($_SESSION['errors_cm'] as $error) {

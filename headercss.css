@@ -50,10 +50,14 @@
 }
 
 #navbar a:hover {
-    background-color: darkblue;
+    background-color: darkgrey;
 }
 
 #horizontal-list{
     display: inline-block;
     margin-left: -4px;
+}
+
+.active{
+  background: darkblue  !important;
 }

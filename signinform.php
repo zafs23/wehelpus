@@ -8,8 +8,8 @@
 
   $email_preset = "";
   $pass_preset = "";
-  $fname_preset ="";
-  $fname_preset ="";
+  //$fname_preset ="";
+  //$fname_preset ="";
 
   if (isset($_SESSION['form'])) {
     $email_preset = $_SESSION['form']['useremail'];
@@ -51,7 +51,7 @@
       ?>
 
     <p class="remember_me">
-      <label>
+      <label for= "checkbox">
         <input type="checkbox" name="remember_me" id="remember_me">
         Remember me on this computer
       </label>

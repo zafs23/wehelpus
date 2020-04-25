@@ -128,12 +128,16 @@ $conn = $dao->getConnection();
 		$lname = mysqli_real_escape_string($conn, $_POST['lastname']);
     }
 
-   
-   
+    $pass=trim($pass);
+
+   $salt = "4/24/2020"; 
+   //$pass = sha256($pass.$salt);
+   $pass = hash('sha256', $pass.$salt);
 
 	$query = $dao->saveUser($email, $fname, $lname, $pass);
 	if (!$query)
-	{
+	{       
+		    $_SESSION["loggedin"] = true;
 			echo "Failed";
 			header ("Location: signupform.php");
 		    //echo "<br/><a href= 'group.php'>SignUp </a>";

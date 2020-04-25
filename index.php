@@ -32,3 +32,9 @@ include 'header.php';
 include 'footer.php';
 
 ?>
+
+<script>
+  $("active").click(function(){
+      $(this).toggleClass("clicked");
+    });
+</script>

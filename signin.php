@@ -13,7 +13,7 @@ $conn = $dao->getConnection();
 $errors_em = array();
 $errors_ps = array();
 
-
+$email = $pass  = '';
 //validate data 
 
 // check email
@@ -56,6 +56,11 @@ if (0 < count($errors_em) || 0 < count($errors_ps) ){
 		//$query = mysqli_query($conn, $sql);
 		//$result = mysqli_fetch_array($query);
 
+       $pass=trim($pass);
+       $salt = "4/24/2020"; 
+       //$pass = sha256($pass.$salt);
+       $pass = hash('sha256', $pass.$salt);
+
 		$query = $dao->checkusers($email, $pass);
 		
 		//if ($result[0]>0)
@@ -63,13 +68,14 @@ if (0 < count($errors_em) || 0 < count($errors_ps) ){
 		{
 			//$_SESSION ['email']=$email;
 			$_SESSION['form'] = $_POST;
+			$_SESSION["loggedin"] = true;
 			header ("Location: index.php");
 			//echo "Successful";
 		    //echo "<br/><a href= 'group.php'>Sign In </a>";
 		}
 		else 
-		{
-			$errors_em[]= "Log in Failed";
+		{   //echo $pass ;
+			$errors_em[]= "log in failed";
 		    $_SESSION['form'] = $_POST;
             $_SESSION['errors_em'] = $errors_em;
 			//echo "Log in Falied";
